@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Mood App</title>
+
+    <style>
+        body {
+            background-color: rbg(156,192,218);
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1f3556;
+            text-align: center;
+        }
+
+        .app-container {
+            background-color: #c2d7e8;
+            max-width: 600px;
+            margin: 60px auto;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        select, button {
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        button {
+            background-color: #183e77;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0f2b52;
+        }
+
+        .results {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        a {
+            display: block;
+            margin-top: 30px;
+            color: #183e77;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="app-container">
+        <h1>🎼 Music Mood Generator</h1>
+        <p>Select Your Current Mood and Get a Music Recommendation!</p>
+        <select id="mood">
+            <option value="">-- Choose a Mood --</option>
+            <option value="happy">Happy</option>
+            <option value="sad">Sad</option>
+            <option value="energetic">Energetic</option>
+            <option value="chill">Chill</option>
+        </select>
+       
+        <br>
+        <button onclick="generateMusic()">Generate Music</button>
+        <div class="result" id="result"></div>
+        <a href="music.html">⬅️ Back to Scratch Page</a>
+    </div>
+
+    <script>
+        function generateMusic() {
+            const mood = document.getElementById("mood").value;
+            const result = document.getElementById("result");
+
+            if (mood === "") {
+                result.textContent = "Please Select a Mood First!";
+                return;
+            }
+
+            let message = "";
+
+            if (mood === "happy") {
+                message = "Try Pop or Kpop! Artists like TWICE or Ariana Grande are perfect for this mood.";
+            } else if (mood === "sad") {
+                message = "R&B is a great choice! Try listening to SZA or DPR Ian.";
+            } else if (mood === "energetic") {
+                message = "Hip-Hop or upbeat Pop will hype you up! Kendrick Lamar or Stray Kids are great picks.";
+            } else if (mood === "chill") {
+                message = "Indie or Alt-R&B fits perfectly. Try Lyn Lapid or brb."
+            }
+
+            result.textContent = message;
+        }
+    </script>
+</body>
+</html>
