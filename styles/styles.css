@@ -1,0 +1,52 @@
+.page-container {
+    max-width: 900px;
+    margin: 60px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.page-title {
+    color: #0d47a1;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero {
+    background-color: #183e77;
+    padding: 120px 20px 100px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 20px auto 0;
+}
+
+.section-padding {
+    padding: 80px 20px;
+}
+
+.section-padding h2 {
+    color: #183e77;
+    font-weight: 600;
+}
+
+.section-padding p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+body {
+    background-color: white;
+    color: black;
+    padding-top: 70px;
+}

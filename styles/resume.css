@@ -1,0 +1,21 @@
+.resume-container {
+    padding-top: 80px;
+    max-width: 900px;
+}
+
+.resume.title {
+    color: #183e77;
+    font-weight: 700;
+}
+
+.section-title {
+    color: #183e77;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.resume-card {
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background-color: #bcd0ee;
+}
